@@ -1,0 +1,23 @@
+[
+    {
+        "email": "john.doe@example.com",
+        "name": "John Doe",
+        "phone": "123-456-7890",
+        "age": 30,
+        "address": "123 Elm Street, Springfield, IL"
+    },
+    {
+        "email": "jane.smith@example.com",
+        "name": "Jane Smith",
+        "phone": "987-654-3210",
+        "age": 25,
+        "address": "456 Oak Avenue, Metropolis, NY"
+    },
+    {
+        "email": "sam.wilson@example.com",
+        "name": "Sam Wilson",
+        "phone": "236-461-3123",
+        "age": 35,
+        "address": "678 Pine Street, Star City, CA"
+    }
+]
