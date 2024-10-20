@@ -1,11 +1,14 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>G1 Shopper Page</title>
     <!-- Dayon M -->
 </head>
 <body>
     <h1>Shopper Information For The Records!</h1>
-    <form>
+    <form id="shopperForm">
         <label for="email">Email (This is so required!!):</label>
         <input type="email" id="email" name="email" required><br><br>
 
@@ -24,12 +27,45 @@
         <button type="submit">Submit</button>
     </form>
 
+    <script>
+        //<---Ali Almalky--->
+        document.getElementById('shopperForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            
+            const newShopper = {
+                email: document.getElementById('email').value,
+                name: document.getElementById('name').value,
+                phone: document.getElementById('phone').value || "N/A",
+                age: parseInt(document.getElementById('age').value),
+                address: document.getElementById('address').value
+            };
+
+            
+            let shoppers = JSON.parse(localStorage.getItem('shoppers')) || [];
+            shoppers.push(newShopper); 
+            
+            localStorage.setItem('shoppers', JSON.stringify(shoppers));
+
+            alert('Shopper added successfully!');
+        });
+
+        
+        function fetchShoppers() {
+            const shoppers = JSON.parse(localStorage.getItem('shoppers')) || [];
+            console.log('All Shoppers:', shoppers);
+            return shoppers;
+        }
+
+      //<---Ali--->
+    </script>
+
     <style>
         /* Dayon M */
         body {
             background-color: black;
             color: white;
-            font-family: ariel;
+            font-family: arial, sans-serif;
         }
 
         h1 {
