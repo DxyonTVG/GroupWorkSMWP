@@ -63,7 +63,7 @@
         if (field === 'email') {
             if (!valueInserted) {
                 document.getElementById(messageDisplay).innerText = "Email is required.";
-            }   (!valueInserted.includes('@') || !valueInserted.endsWith('.com'))
+            }else if (!valueInserted.includes('@') || !valueInserted.endsWith('.com'))
                 document.getElementById(messageDisplay).innerText = "Email must be in the format letters@something.com.";
 
         } else if (field === 'name') {
