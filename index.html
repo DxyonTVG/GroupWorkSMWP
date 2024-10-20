@@ -95,7 +95,7 @@
 
 <script>
     //<---Ali Almalky--->
-    const Shoppers = [
+    const jsonShoppers = [
         {
             "email": "johndoe@example.com",
             "name": "John Doe",
@@ -127,7 +127,7 @@
 
         const jsonOutput = document.getElementById('jsonOutput');
 
-        if (jsonOutput.innerHTML === `<pre style="color: white;">${JSON.stringify(Shoppers, null, 2)}</pre>`) {
+        if (jsonOutput.innerHTML === `<pre style="color: white;">${JSON.stringify(jsonShoppers, null, 2)}</pre>`) {
         } else {
             jsonOutput.innerHTML = `<pre style="color: white;">${JSON.stringify(newShopper, null, 2)}</pre>`;
         }
